@@ -1,0 +1,31 @@
+{
+    "experimentos": [
+        {
+            "id_experimento": 1,
+            "nome_experimento": "experiment1",
+            "readme": "Lorem ipsum dolor sit amet.",
+            "anos_total": 1000,
+            "ano_atual": 900,
+            "status": "ativo_ok",
+            "total_erros": 0
+        },
+        {
+            "id_experimento": 2,
+            "nome_experimento": "experiment2",
+            "readme": "Lorem ipsum dolor sit amet.",
+            "anos_total": 250,
+            "ano_atual": 150,
+            "status": "ativo_erro",
+            "total_erros": 1
+        },
+        {
+            "id_experimento": 3,
+            "nome_experimento": "experiment3",
+            "readme": "Lorem ipsum dolor sit amet.",
+            "anos_total": 10,
+            "ano_atual": 9,
+            "status": "ativo_aborted",
+            "total_erros": 10
+        }
+    ]
+}
