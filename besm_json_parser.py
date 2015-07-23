@@ -19,10 +19,14 @@ if len(sys.argv) == 3:
     json_file = sys.argv[1]
     db_file = sys.argv[2]
 
-with open(db_file, "r") as db_info:
-    lines = db_info.readlines()
-    for line in lines:
-        db_name, db_user, db_pass = line.split()
+try:
+    with open(db_file, "r") as db_info:
+        lines = db_info.readlines()
+        for line in lines:
+            db_name, db_user, db_pass = line.split()
+except IOError:
+    print("Error: no such file ../db_info.txt")
+    sys.exit()
 
 db = MySQLDatabase(database=db_name, user=db_pass, passwd=db_pass)
 status_choices = (
@@ -45,7 +49,6 @@ class wp_experimentos(peewee.Model):
 
     class Meta:
         database = db
-
 
 
 with open(json_file) as data_file:
